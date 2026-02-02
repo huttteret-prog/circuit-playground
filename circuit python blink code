@@ -1,0 +1,13 @@
+circuit python blink
+
+import time
+import board
+import neopixel
+num_pixels = 10
+pixels = neopixel.NeoPixel(board.NEOPIXEL, num_pixels, brightness=0.3, auto_write=True)
+
+while True:
+    pixels.fill((255, 0, 0))  
+    time.sleep(0.5)
+    pixels.fill((0, 0, 0))    
+    time.sleep(0.5)
